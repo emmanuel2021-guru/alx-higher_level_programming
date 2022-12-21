@@ -4,4 +4,10 @@ class Square:
 
         Attributes:
             No attributes """
-    pass
+    def __init__(self):
+        """ This method does nothing
+
+        Args:
+            No Arguments
+        """
+        pass
