@@ -13,10 +13,9 @@ class Square:
                 size (int): the size of the square
         """
         try:
+            self.__size = size
             if size < 0:
                 raise ValueError
-            else:
-                self.__size = size
         except TypeError:
             print("size must be an integer")
         except ValueError:
