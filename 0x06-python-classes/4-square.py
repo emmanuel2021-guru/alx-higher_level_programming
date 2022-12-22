@@ -40,7 +40,7 @@ class Square:
             print("size must be an integer")
         except ValueError:
             print("size must be >= 0")
-    
+
     def area(self):
         """ Returns the area of a square """
         return self.size ** 2
