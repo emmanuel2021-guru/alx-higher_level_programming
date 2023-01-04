@@ -86,8 +86,10 @@ class Rectangle:
                     print("\n", end="")
                 else:
                     return ""
+
     def __repr__(self):
         """String representation of a rectangle object to be
            able to recreate a new instance by using eval()
         """
-        return "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
+        return "Rectangle(" + str(self.__width) + ", " +\
+        str(self.__height) + ")"
