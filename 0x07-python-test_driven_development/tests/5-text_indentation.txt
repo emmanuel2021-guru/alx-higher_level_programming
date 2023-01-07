@@ -1,0 +1,58 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation(454)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/czernoxx/alx-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 13, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation("jkdijef.jdkdijjfjdl;kdlkj/kdl?")
+jkdijef.
+<BLANKLINE>
+<BLANKLINE>
+jdkdijjfjdl;kdlkj/kdl?
+<BLANKLINE>
+<BLANKLINE>
+>>> text_indentation("1.55585")
+1.
+<BLANKLINE>
+<BLANKLINE>
+55585
+>>> text_indentation(1.58856)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/czernoxx/alx-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 13, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation(1.58856, "457858")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+>>> text_indentation(-111.25525)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/czernoxx/alx-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 13, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation("ASKDJIEJL;LAKDFJ.?DKLSJKDLSL????")
+ASKDJIEJL;LAKDFJ.
+<BLANKLINE>
+<BLANKLINE>
+?
+<BLANKLINE>
+<BLANKLINE>
+DKLSJKDLSL?
+<BLANKLINE>
+<BLANKLINE>
+?
+<BLANKLINE>
+<BLANKLINE>
+?
+<BLANKLINE>
+<BLANKLINE>
+?
+<BLANKLINE>
+<BLANKLINE>
