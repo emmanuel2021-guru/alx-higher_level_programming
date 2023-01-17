@@ -13,4 +13,4 @@ class TestBase(unittest.TestCase):
         b = Base(12)
         self.assertAlmostEqual(b.id, 12)
         c = Base(0)
-        self.assertAlmostEqual(c.id, 0
+        self.assertAlmostEqual(c.id, 0)
