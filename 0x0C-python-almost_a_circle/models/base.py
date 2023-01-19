@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-import json
-
 """Defines a base class"""
 
+import json
 
 class Base():
     """Represents the base class of all other classes in project 0x0C*
