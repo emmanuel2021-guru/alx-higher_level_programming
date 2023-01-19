@@ -1,14 +1,22 @@
 #!/usr/bin/python3
 
-from models.base import Base
-
 """Defines a rectangle class that inherits from Base"""
+
+from models.base import Base
 
 
 class Rectangle(Base):
     """Represents a rectangle class inheriting from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initializes a Rectangle instance"""
+        """Initializes a Rectangle instance
+
+           Args:
+               width (int): Rectangle width
+               height (int): Rectangle height
+               x (int): Rectangle offset on x-axis
+               y (int): Rectangle offset on y-axis
+               id (int): Base id
+        """
         if type(width) is int and width > 0:
             self.__width = width
         elif type(width) is not int:
@@ -41,12 +49,11 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Getter function for width"""
+        """Sets/Gets the value of width"""
         return self.__width
 
     @width.setter
     def width(self, val):
-        """Setter function for width"""
         if type(val) is int and val > 0:
             self.__width = val
         elif type(val) is not int:
@@ -56,12 +63,11 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Getter function for height"""
+        """Sets/Gets the value of height"""
         return self.__height
 
     @height.setter
     def height(self, val):
-        """Setter function for width"""
         if type(val) is int and val > 0:
             self.__height = val
         elif type(val) is not int:
@@ -71,12 +77,11 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Getter function for x"""
+        """Sets/Gets the value of x"""
         return self.__x
 
     @x.setter
     def x(self, val):
-        """Setter function for x"""
         if type(val) is int and val >= 0:
             self.__x = val
         elif type(val) is not int:
@@ -86,12 +91,11 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Getter function for y"""
+        """Sets/Gets the value of y"""
         return self.__y
 
     @y.setter
     def y(self, val):
-        """Setter function for y"""
         if type(val) is int and val >= 0:
             self.__y = val
         elif type(val) is not int:
@@ -124,7 +128,17 @@ class Rectangle(Base):
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """Assigns argument to each attribute"""
+        """Updates the Rectangle
+
+           Args:
+               *args: list of arguments
+                      1st argument - id attribute
+                      2nd argument - width attribute
+                      3rd argument - height attribute
+                      4th argument - x attribute
+                      5th argument - y attribute
+               **kwargs: double pointer to a dictionary; key/value
+        """
         if len(args) != 0:
             for i in range(len(args)):
                 if i == 0:
