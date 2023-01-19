@@ -6,7 +6,11 @@ import json
 
 
 class Base():
-    """Represents the base class of all other classes in project"""
+    """Represents the base class of all other classes in project 0x0C*
+       
+       Attributes:
+            __nb_objects (int): The number of instantiated bases
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
