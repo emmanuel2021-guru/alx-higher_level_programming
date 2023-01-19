@@ -138,3 +138,14 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(print(r1), print("[Rectangle] (89) 1/3 - 4/2"))
         r1.update(89, 2, 3, 4, 5)
         self.assertEqual(print(r1), print("[Rectangle] (89) 4/5 - 2/3"))
+
+    def test_to_dictionary(self):
+        """Tests the to_dictionary function"""
+        r1 = Rectangle(10, 2, 1, 9)
+        r1_dictionary = r1.to_dictionary()
+        self.assertEqual(print(r1_dictionary), print("{'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}"))
+        self.assertEqual(print(type(r1_dictionary)), print("<class 'dict'>"))
+        r2 = Rectangle(1, 1)
+        r2.update(**r1_dictionary)
+        self.assertEqual(print(r2), print("[Rectangle] (1) 1/9 - 10/2"))
+        self.assertEqual(r1 == r2, False)
