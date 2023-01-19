@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import json
-"""Defines a class "Base"""
+"""Defines a class Base"""
 
 
 class Base(object):
