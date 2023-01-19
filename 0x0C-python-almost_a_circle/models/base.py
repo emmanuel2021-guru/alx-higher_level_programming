@@ -4,9 +4,10 @@
 
 import json
 
+
 class Base():
     """Represents the base class of all other classes in project 0x0C*
-       
+
        Attributes:
             __nb_objects (int): The number of instantiated bases
     """
@@ -14,7 +15,7 @@ class Base():
 
     def __init__(self, id=None):
         """Initializes an instance of Base class with id
-           
+
            Args:
                id (int): instance id
         """
@@ -27,7 +28,7 @@ class Base():
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation of list_dictionaries
-           
+
            Args:
                list_dictionaries: a list of dictionaries
         """
