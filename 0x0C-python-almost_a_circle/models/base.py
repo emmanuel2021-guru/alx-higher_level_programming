@@ -50,6 +50,8 @@ class Base():
         else:
             ret_list = list()
             for inst in list_objs:
-                ret_list.append(inst.__dict__)
+                temp_inst = inst
+                inst_dict = temp_inst.__dict__
+                ret_list.append(inst_dict)
             with open("{}".format(cls.__name__ + ".json"), "w", encoding="utf-8") as fn:
                 fn.write(cls.to_json_string(ret_list))

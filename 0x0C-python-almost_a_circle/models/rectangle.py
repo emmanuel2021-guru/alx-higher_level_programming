@@ -17,6 +17,7 @@ class Rectangle(Base):
                y (int): Rectangle offset on y-axis
                id (int): Base id
         """
+        Base.__init__(self, id)
         if type(width) is int and width > 0:
             self.__width = width
         elif type(width) is not int:
@@ -45,7 +46,6 @@ class Rectangle(Base):
         else:
             raise ValueError("y must be >= 0")
 
-        Base.__init__(self, id)
 
     @property
     def width(self):

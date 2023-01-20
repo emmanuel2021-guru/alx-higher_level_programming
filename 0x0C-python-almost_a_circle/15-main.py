@@ -10,3 +10,6 @@ if __name__ == "__main__":
 
     with open("Rectangle.json", "r") as file:
         print(file.read())
+
+    print(r1.__dict__)
+    print(r1.__class__)
