@@ -48,10 +48,13 @@ class Base():
             with open("{}".format(cls.__name__ + ".json"), "w", encoding="utf-8") as fn:
                 fn.write("[]")
         else:
-            ret_list = list()
+            ret_list = []
             for inst in list_objs:
-                temp_inst = inst
-                inst_dict = temp_inst.__dict__
-                ret_list.append(inst_dict)
+                if inst.__class__.__name__ == "Rectangle":
+                    ret_list.append({"id": inst.id, "width": inst.width,
+                                     "height": inst.height, "x": inst.x, "y": inst.y})
+                elif inst.__class__.__name__ == "Square":
+                    ret_list.append({"id": inst.id, "size": inst.width, "x": inst.x,
+                                     "y": inst.y})
             with open("{}".format(cls.__name__ + ".json"), "w", encoding="utf-8") as fn:
                 fn.write(cls.to_json_string(ret_list))
