@@ -32,7 +32,7 @@ class Base():
            Args:
                list_dictionaries: a list of dictionaries
         """
-        if list_dictionaries is None:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -61,3 +61,16 @@ class Base():
             with open("{}".format(cls.__name__ + ".json"),
                       "w", encoding="utf-8") as fn:
                 fn.write(cls.to_json_string(ret_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation
+
+           Args:
+                jsons_string: string representing
+                              a list of dictionaries
+        """
+        if json_string is None or json_string == []:
+            return "[]"
+        else:
+            return json.loads(json_string)
