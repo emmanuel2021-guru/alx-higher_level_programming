@@ -85,4 +85,3 @@ class Base():
         dummy_inst = cls(4, 5, 2, 7, 5)
         dummy_inst.update(**dictionary)
         return dummy_inst
-
