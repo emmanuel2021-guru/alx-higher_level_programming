@@ -88,3 +88,22 @@ class Base():
             dummy_inst = cls(5)
         dummy_inst.update(**dictionary)
         return dummy_inst
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances loaded from a .json file"""
+        inst_list = list()
+        if cls.__name__ == "Rectangle":
+            with open("{}".format(cls.__name__ + ".json"), encoding="utf-8") as fn:
+                json_string = fn.read()
+                list_dicts = cls.from_json_string(json_string)
+                for inst in list_dicts:
+                    inst_list.append(cls.create(**inst))
+                return inst_list
+        elif cls.__name__ == "Square":
+            with open("{}".format(cls.__name__ + ".json"), encoding="utf-8") as fn:
+                json_string = fn.read()
+                list_dicts = cls.from_json_string(json_string)
+                for inst in list_dicts:
+                    inst_list.append(cls.create(**inst))
+                return inst_list
