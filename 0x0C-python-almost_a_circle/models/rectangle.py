@@ -42,7 +42,7 @@ class Rectangle(Base):
         if type(y) is int and y >= 0:
             self.__y = y
         elif type(y) is not int:
-            raise TypeError("y must be an intger")
+            raise TypeError("y must be an integer")
         elif y < 0:
             raise ValueError("y must be >= 0")
 
