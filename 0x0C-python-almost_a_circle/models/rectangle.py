@@ -46,7 +46,6 @@ class Rectangle(Base):
         elif y < 0:
             raise ValueError("y must be >= 0")
 
-
     @property
     def width(self):
         """Sets/Gets the value of width"""
