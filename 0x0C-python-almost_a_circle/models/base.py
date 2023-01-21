@@ -82,6 +82,9 @@ class Base():
            Args:
                 **dictionary: double pointer to a dictionary
         """
-        dummy_inst = cls(1, 2)
+        if cls.__name__ == "Rectangle":
+            dummy_inst = cls(1, 2)
+        elif cls.__name__ == "Square":
+            dummy_inst = cls(5)
         dummy_inst.update(**dictionary)
         return dummy_inst
