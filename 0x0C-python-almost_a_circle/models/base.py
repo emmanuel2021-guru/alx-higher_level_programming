@@ -82,6 +82,6 @@ class Base():
            Args:
                 **dictionary: double pointer to a dictionary
         """
-        dummy_inst = cls(4, 5, 2, 7, 5)
+        dummy_inst = cls(1, 2, 5, 8)
         dummy_inst.update(**dictionary)
         return dummy_inst
