@@ -7,4 +7,4 @@ exports.nb0ccurences = function (list, searchElement) {
     }
   }
   return (count);
-}
+};
