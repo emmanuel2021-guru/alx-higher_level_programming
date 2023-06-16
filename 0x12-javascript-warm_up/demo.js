@@ -1,3 +1,5 @@
 #!/usr/bin/node
-const arr = process.argv;
-console.log(arr[2]);
+let text = 'Hello world!';
+let result = text.repeat(4);
+
+console.log(result);
