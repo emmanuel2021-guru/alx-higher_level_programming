@@ -14,5 +14,8 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    print("{}: {}".format(session.query(State).first().id,
-                          session.query(State).first().name))
+    try:
+        print("{}: {}".format(session.query(State).first().id,
+                              session.query(State).first().name))
+    except AttributeError:
+        print("Nothing")
