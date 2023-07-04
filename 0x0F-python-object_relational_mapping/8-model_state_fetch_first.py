@@ -14,5 +14,5 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State).filter_by(id='1'):
-        print("{}: {}".format(instance.id, instance.name))
+    print("{}: {}".format(session.query(State).first().id,
+                          session.query(State).first().name))
