@@ -8,7 +8,7 @@ import sys
 
 
 if __name__ == "__main__":
-    if sys.argv[1] == None:
+    if sys.argv[1] is None:
         p_data = {'q': ""}
     else:
         p_data = {'q': sys.argv[1]}
@@ -18,6 +18,6 @@ if __name__ == "__main__":
         if json_r == "":
             print("No result")
         else:
-            print("{} {}".format(json_r.id, json_r.name))
+            print("{} {}".format(json_r[0]['id'], json_r[0]['name']))
     except JSONDecodeError:
         print("Not a valid JSON")
