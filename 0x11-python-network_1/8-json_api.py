@@ -15,9 +15,8 @@ if __name__ == "__main__":
     req = requests.post('http://0.0.0.0:5000/search_user', data=p_data)
     try:
         json_r = req.json()
-        if len(sys.argv) == 1:
-            print("No result")
-        else:
-            print("[{}] {}".format(json_r['id'], json_r['name']))
+        print("[{}] {}".format(json_r['id'], json_r['name']))
+    except KeyError:
+        print("No result")
     except requests.exceptions.RequestException:
         print("Not a valid JSON")
