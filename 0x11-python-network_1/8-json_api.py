@@ -5,7 +5,6 @@
 
 import requests
 import sys
-import json
 
 
 if __name__ == "__main__":
@@ -20,5 +19,5 @@ if __name__ == "__main__":
             print("No result")
         else:
             print("[{}] {}".format(json_r['id'], json_r['name']))
-    except json.decoder.JSONDecodeError:
+    except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
