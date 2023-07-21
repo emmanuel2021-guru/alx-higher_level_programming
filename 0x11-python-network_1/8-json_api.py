@@ -18,6 +18,6 @@ if __name__ == "__main__":
         if json_r == "":
             print("No result")
         else:
-            print("{} {}".format(json_r['id'], json_r['name']))
+            print("[{}] {}".format(json_r['id'], json_r['name']))
     except JSONDecodeError:
         print("Not a valid JSON")
