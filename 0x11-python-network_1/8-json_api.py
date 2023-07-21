@@ -5,7 +5,6 @@
 
 import requests
 import sys
-from requests.exceptions import JSONDecodeError
 
 
 if __name__ == "__main__":
@@ -20,5 +19,5 @@ if __name__ == "__main__":
         req.raise_for_status()
     except KeyError:
         print("No result")
-    except JSONDecodeError:
+    except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
