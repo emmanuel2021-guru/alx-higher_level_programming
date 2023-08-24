@@ -1,4 +1,4 @@
-# ALX Higher Level Programming Repository
+# ALX Higher Level Programming
 
 Welcome to the ALX Higher Level Programming repository! This repository is dedicated to my journey as a software engineering learner in the higher-level programming track. Here, you will find my solutions, projects, and progress as I delve into various topics related to software development.
 
